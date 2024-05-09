@@ -1,7 +1,5 @@
 from fastapi import FastAPI
-
+from routers import router
 app = FastAPI()
 
-@app.get('/')
-def home():
-    return 'Ola'
+app.include_router(router=router)
